@@ -1,0 +1,2110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ENHYPEN | Beyond the Border</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --background: #06070b;
+    --background2: #0d1018;
+    --card: #121520;
+    --card-hover: #191d2a;
+    --white: #ffffff;
+    --gray: #a7adbd;
+    --purple: #9c8cff;
+    --purple-dark: #7061ff;
+    --border: rgba(255,255,255,0.1);
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: var(--background);
+    color: var(--white);
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+button {
+    font-family: inherit;
+}
+
+section {
+    padding: 100px 7%;
+}
+
+.container {
+    max-width: 1250px;
+    margin: auto;
+}
+
+
+/* =========================
+   SECTION TITLE
+========================= */
+
+.section-title {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.section-title span {
+    color: var(--purple);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.section-title h2 {
+    font-family: "Montserrat", sans-serif;
+    font-size: clamp(32px, 5vw, 52px);
+    margin-top: 8px;
+}
+
+.section-title p {
+    max-width: 650px;
+    margin: 15px auto;
+    color: var(--gray);
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(6,7,11,0.8);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid var(--border);
+}
+
+.navbar {
+    max-width: 1400px;
+    height: 75px;
+    padding: 0 6%;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: "Montserrat", sans-serif;
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: var(--purple);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 28px;
+}
+
+.nav-links a {
+    font-size: 14px;
+    color: #d8dae3;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--purple);
+}
+
+.menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+
+    background:
+        radial-gradient(
+            circle at 80% 20%,
+            rgba(112,97,255,0.2),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 10% 80%,
+            rgba(156,140,255,0.1),
+            transparent 30%
+        ),
+        var(--background);
+}
+
+.hero-content {
+    max-width: 1250px;
+    width: 100%;
+    margin: auto;
+
+    padding: 110px 7% 50px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.hero-text span {
+    color: var(--purple);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 5px;
+}
+
+.hero-text h1 {
+    font-family: "Montserrat", sans-serif;
+    font-size: clamp(55px, 8vw, 105px);
+    line-height: 0.95;
+    letter-spacing: -5px;
+    margin: 18px 0 25px;
+}
+
+.hero-text h1 strong {
+    color: transparent;
+    -webkit-text-stroke: 1px white;
+}
+
+.hero-text p {
+    max-width: 570px;
+    color: var(--gray);
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 25px;
+    border-radius: 30px;
+
+    background: var(--purple);
+    color: white;
+
+    border: 1px solid var(--purple);
+
+    font-weight: 600;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 35px rgba(156,140,255,0.25);
+}
+
+.btn-outline {
+    background: transparent;
+}
+
+.hero-image {
+    position: relative;
+}
+
+.hero-image::before {
+    content: "";
+    position: absolute;
+    inset: -20px;
+
+    border: 1px solid rgba(156,140,255,0.25);
+    border-radius: 30px;
+
+    transform: rotate(5deg);
+}
+
+.hero-image img {
+    position: relative;
+
+    height: 520px;
+    object-fit: cover;
+
+    border-radius: 25px;
+
+    box-shadow: 0 30px 80px rgba(0,0,0,0.5);
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+    background: var(--background2);
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 25px;
+    display: block;
+}
+
+.about-text h3 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    color: var(--gray);
+    margin-bottom: 20px;
+}
+
+.facts {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.fact {
+    background: var(--card);
+    border: 1px solid var(--border);
+    padding: 18px;
+    border-radius: 15px;
+}
+
+.fact strong {
+    display: block;
+    color: var(--purple);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+
+/* =========================
+   MEMBERS
+========================= */
+
+.members {
+    background: var(--background);
+}
+
+.members-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 25px;
+}
+
+.member-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+
+    overflow: hidden;
+    cursor: pointer;
+
+    transition: 0.4s;
+}
+
+.member-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(156,140,255,0.6);
+    background: var(--card-hover);
+}
+
+.member-image {
+    height: 390px;
+    overflow: hidden;
+}
+
+.member-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    transition: 0.5s;
+}
+
+.member-card:hover .member-image img {
+    transform: scale(1.06);
+}
+
+.member-info {
+    padding: 20px;
+}
+
+.member-info h3 {
+    font-size: 23px;
+}
+
+.member-info span {
+    color: var(--purple);
+    font-size: 13px;
+}
+
+.member-info p {
+    color: var(--gray);
+    font-size: 13px;
+    margin-top: 8px;
+}
+
+
+/* =========================
+   SONGS
+========================= */
+
+.songs {
+    background: var(--background2);
+}
+
+.search-box {
+    max-width: 500px;
+    margin: 0 auto 25px;
+}
+
+.search-box input {
+    width: 100%;
+
+    padding: 15px 20px;
+
+    background: var(--card);
+    color: white;
+
+    border: 1px solid var(--border);
+    border-radius: 30px;
+
+    outline: none;
+}
+
+.song-controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+
+    margin-bottom: 35px;
+}
+
+.filter-btn {
+    padding: 10px 18px;
+
+    background: var(--card);
+    color: white;
+
+    border: 1px solid var(--border);
+    border-radius: 25px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: var(--purple);
+}
+
+.songs-grid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+}
+
+.song-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    background: var(--card);
+    border: 1px solid var(--border);
+
+    padding: 15px;
+    border-radius: 18px;
+
+    transition: 0.3s;
+}
+
+.song-card:hover {
+    transform: translateY(-4px);
+}
+
+.song-cover {
+    width: 75px;
+    height: 75px;
+    flex-shrink: 0;
+}
+
+.song-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.song-info {
+    flex: 1;
+}
+
+.song-info h4 {
+    font-size: 15px;
+}
+
+.song-info p {
+    color: var(--gray);
+    font-size: 12px;
+}
+
+.play-btn {
+    width: 42px;
+    height: 42px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: var(--purple);
+    color: white;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.play-btn:hover {
+    transform: scale(1.1);
+}
+
+
+/* =========================
+   ALBUMS
+========================= */
+
+.albums-grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+}
+
+.album-card {
+    background: var(--card);
+    padding: 15px;
+
+    border: 1px solid var(--border);
+    border-radius: 18px;
+
+    transition: 0.3s;
+}
+
+.album-card:hover {
+    transform: translateY(-6px);
+}
+
+.album-card img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+
+    border-radius: 12px;
+}
+
+.album-card h3 {
+    margin-top: 15px;
+    font-size: 16px;
+}
+
+.album-card p {
+    color: var(--gray);
+    font-size: 12px;
+}
+
+
+/* =========================
+   TIMELINE
+========================= */
+
+.timeline {
+    max-width: 850px;
+    margin: auto;
+
+    position: relative;
+}
+
+.timeline::before {
+    content: "";
+
+    position: absolute;
+    left: 50%;
+
+    width: 2px;
+    height: 100%;
+
+    background: var(--border);
+}
+
+.timeline-item {
+    width: 50%;
+    padding: 20px 35px;
+
+    position: relative;
+}
+
+.timeline-item:nth-child(odd) {
+    left: 0;
+    text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%;
+}
+
+.timeline-content {
+    background: var(--card);
+    border: 1px solid var(--border);
+
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.timeline-content span {
+    color: var(--purple);
+    font-weight: 700;
+}
+
+.timeline-content p {
+    color: var(--gray);
+    font-size: 14px;
+}
+
+
+/* =========================
+   GALLERY
+========================= */
+
+.gallery {
+    background: var(--background2);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 15px;
+}
+
+.gallery-item {
+    height: 260px;
+
+    overflow: hidden;
+    border-radius: 15px;
+
+    cursor: pointer;
+}
+
+.gallery-item img {
+    height: 100%;
+    object-fit: cover;
+
+    transition: 0.5s;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.08);
+}
+
+
+/* =========================
+   MEMBER MODAL
+========================= */
+
+.modal {
+    position: fixed;
+    inset: 0;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    background: rgba(0,0,0,0.85);
+    backdrop-filter: blur(10px);
+
+    z-index: 2000;
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal-content {
+    width: 100%;
+    max-width: 650px;
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    background: var(--card-hover);
+
+    border: 1px solid var(--border);
+
+    border-radius: 25px;
+
+    padding: 30px;
+
+    position: relative;
+}
+
+.close {
+    position: absolute;
+
+    top: 15px;
+    right: 20px;
+
+    font-size: 30px;
+
+    color: var(--gray);
+
+    cursor: pointer;
+}
+
+.modal-profile {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 25px;
+
+    align-items: center;
+}
+
+.modal-profile img {
+    height: 220px;
+    object-fit: cover;
+
+    border-radius: 15px;
+}
+
+.modal-profile h2 {
+    font-size: 30px;
+}
+
+.modal-profile span {
+    color: var(--purple);
+}
+
+.modal-profile p {
+    color: var(--gray);
+    font-size: 14px;
+    margin-top: 12px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 50px 7%;
+
+    text-align: center;
+
+    background: #040509;
+
+    border-top: 1px solid var(--border);
+}
+
+footer h2 {
+    letter-spacing: 3px;
+}
+
+footer p {
+    max-width: 650px;
+
+    margin: 15px auto;
+
+    color: var(--gray);
+    font-size: 13px;
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+
+    gap: 15px;
+
+    margin: 20px 0;
+}
+
+.socials a {
+    width: 42px;
+    height: 42px;
+
+    display: grid;
+    place-items: center;
+
+    border: 1px solid var(--border);
+    border-radius: 50%;
+
+    transition: 0.3s;
+}
+
+.socials a:hover {
+    background: var(--purple);
+}
+
+
+/* =========================
+   BACK TO TOP
+========================= */
+
+#topBtn {
+    position: fixed;
+
+    right: 25px;
+    bottom: 25px;
+
+    width: 45px;
+    height: 45px;
+
+    display: none;
+
+    border: none;
+    border-radius: 50%;
+
+    background: var(--purple);
+    color: white;
+
+    cursor: pointer;
+
+    z-index: 900;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:1000px) {
+
+    .hero-content,
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-text {
+        text-align: center;
+    }
+
+    .hero-text p {
+        margin: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .members-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .albums-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+
+@media(max-width:700px) {
+
+    section {
+        padding: 75px 5%;
+    }
+
+    .nav-links {
+        position: absolute;
+
+        top: 75px;
+        left: 0;
+
+        width: 100%;
+
+        display: none;
+        flex-direction: column;
+
+        align-items: center;
+
+        padding: 25px;
+
+        background: rgba(6,7,11,0.98);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .members-grid,
+    .songs-grid,
+    .albums-grid,
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-image img {
+        height: 380px;
+    }
+
+    .timeline::before {
+        left: 10px;
+    }
+
+    .timeline-item,
+    .timeline-item:nth-child(even) {
+        width: 100%;
+        left: 0;
+
+        text-align: left;
+
+        padding-left: 35px;
+    }
+
+    .modal-profile {
+        grid-template-columns: 1fr;
+    }
+
+    .modal-profile img {
+        height: 300px;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<header>
+
+<nav class="navbar">
+
+    <a href="#home" class="logo">
+        ENHYPEN<span>.</span>
+    </a>
+
+    <button class="menu-btn" id="menuBtn">
+        ☰
+    </button>
+
+    <ul class="nav-links" id="navLinks">
+
+        <li>
+            <a href="#home">Home</a>
+        </li>
+
+        <li>
+            <a href="#about">About</a>
+        </li>
+
+        <li>
+            <a href="#members">Members</a>
+        </li>
+
+        <li>
+            <a href="#songs">Songs</a>
+        </li>
+
+        <li>
+            <a href="#albums">Albums</a>
+        </li>
+
+        <li>
+            <a href="#timeline">Journey</a>
+        </li>
+
+        <li>
+            <a href="#gallery">Gallery</a>
+        </li>
+
+    </ul>
+
+</nav>
+
+</header>
+
+
+<!-- =========================
+     HOME
+========================= -->
+
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+    <div class="hero-text">
+
+        <span>ENHYPEN FAN WEBSITE</span>
+
+        <h1>
+            ENHYPEN<br>
+            <strong>BEYOND</strong>
+        </h1>
+
+        <p>
+            Discover the members, music, albums,
+            memories, and journey of ENHYPEN
+            through this fan-made website.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#members" class="btn">
+                Meet the Members
+            </a>
+
+            <a href="#songs" class="btn btn-outline">
+                Explore Songs
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="hero-image">
+
+        <img
+            src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=1000&q=80"
+            alt="K-pop performance"
+        >
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section class="about" id="about">
+
+<div class="container">
+
+    <div class="section-title">
+
+        <span>About</span>
+
+        <h2>Who is ENHYPEN?</h2>
+
+        <p>
+            A group connected through music,
+            friendship, performance, and their fans.
+        </p>
+
+    </div>
+
+
+    <div class="about-grid">
+
+        <div class="about-image">
+    <img
+        src="images/enhypen.jpg"
+        alt="ENHYPEN Group Photo"
+    >
+</div>
+
+
+        <div class="about-text">
+
+            <h3>Connected by Music</h3>
+
+            <p>
+                ENHYPEN is a South Korean boy group
+                formed through the survival show I-LAND.
+                The group officially debuted in 2020.
+            </p>
+
+            <p>
+                Their music explores themes such as
+                youth, identity, connection, growth,
+                and relationships.
+            </p>
+
+            <div class="facts">
+
+                <div class="fact">
+                    <strong>Members</strong>
+                    6
+                </div>
+
+                <div class="fact">
+                    <strong>Debut</strong>
+                    2020
+                </div>
+
+                <div class="fact">
+                    <strong>Fandom</strong>
+                    ENGENE
+                </div>
+
+                <div class="fact">
+                    <strong>Genre</strong>
+                    K-Pop
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     MEMBERS
+========================= -->
+
+<section id="members">
+
+<div class="container">
+
+    <div class="section-title">
+
+        <span>Meet the Members</span>
+
+        <h2>ENHYPEN Members</h2>
+
+        <p>
+            Click a member to learn more about them.
+        </p>
+
+    </div>
+
+
+    <div class="members-grid" id="membersGrid"></div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     SONGS
+========================= -->
+
+<section class="songs" id="songs">
+
+<div class="container">
+
+    <div class="section-title">
+
+        <span>Music</span>
+
+        <h2>ENHYPEN Songs</h2>
+
+        <p>
+            Explore some of ENHYPEN's songs.
+        </p>
+
+    </div>
+
+
+    <div class="search-box">
+
+        <input
+            type="text"
+            id="songSearch"
+            placeholder="Search for a song..."
+        >
+
+    </div>
+
+
+    <div class="song-controls">
+
+        <button
+            class="filter-btn active"
+            data-filter="all">
+            All
+        </button>
+
+        <button
+            class="filter-btn"
+            data-filter="title">
+            Title Tracks
+        </button>
+
+        <button
+            class="filter-btn"
+            data-filter="popular">
+            Popular
+        </button>
+
+    </div>
+
+
+    <div class="songs-grid" id="songsGrid"></div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     ALBUMS
+========================= -->
+
+<section id="albums">
+
+<div class="container">
+
+    <div class="section-title">
+
+        <span>Discography</span>
+
+        <h2>Albums & Releases</h2>
+
+    </div>
+
+
+    <div class="albums-grid" id="albumsGrid"></div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     TIMELINE
+========================= -->
+
+<section id="timeline">
+
+<div class="container">
+
+    <div class="section-title">
+
+        <span>The Journey</span>
+
+        <h2>ENHYPEN Timeline</h2>
+
+    </div>
+
+
+    <div class="timeline">
+
+        <div class="timeline-item">
+
+            <div class="timeline-content">
+
+                <span>2020</span>
+
+                <h3>Debut</h3>
+
+                <p>
+                    ENHYPEN officially debuted
+                    with their first mini album.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-content">
+
+                <span>2021</span>
+
+                <h3>Growing Worldwide</h3>
+
+                <p>
+                    ENHYPEN continued releasing
+                    music and expanding their
+                    international fanbase.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-content">
+
+                <span>2022</span>
+
+                <h3>New Music & Performances</h3>
+
+                <p>
+                    The group continued growing
+                    through new releases and
+                    performances.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-content">
+
+                <span>2023</span>
+
+                <h3>ORANGE BLOOD</h3>
+
+                <p>
+                    ENHYPEN continued their
+                    musical journey with new releases.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-content">
+
+                <span>2024</span>
+
+                <h3>ROMANCE : UNTOLD</h3>
+
+                <p>
+                    ENHYPEN entered another chapter
+                    of their musical journey.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     GALLERY
+========================= -->
+
+<section class="gallery" id="gallery">
+
+<div class="container">
+
+    <div class="section-title">
+
+        <span>Visuals</span>
+
+        <h2>Gallery</h2>
+
+        <p>
+            A collection of images for the
+            ENHYPEN fan page.
+        </p>
+
+    </div>
+
+
+    <div class="gallery-grid">
+
+        <div class="gallery-item">
+            <img
+                src="images/1.jgp"
+                alt="Concert">
+        </div>
+
+        <div class="gallery-item">
+            <img
+                src="images/2.jpg"
+                alt="Concert">
+        </div>
+
+        <div class="gallery-item">
+            <img
+                src="images/3.jpg"
+                alt="Performance">
+        </div>
+
+        <div class="gallery-item">
+            <img
+                src="images/4.jpg"
+                alt="Concert">
+        </div>
+
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     MODAL
+========================= -->
+
+<div class="modal" id="memberModal">
+
+<div class="modal-content">
+
+    <span class="close" id="closeModal">
+        ×
+    </span>
+
+    <div class="modal-profile">
+
+        <img id="modalImage" src="" alt="Member">
+
+        <div>
+
+            <h2 id="modalName"></h2>
+
+            <span id="modalRole"></span>
+
+            <p id="modalBio"></p>
+
+            <p id="modalFact"></p>
+
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+<h2>ENHYPEN.</h2>
+
+<p>
+    A fan-made website created for ENHYPEN
+    and ENGENE.
+</p>
+
+<p>
+    This website is not officially affiliated
+    with ENHYPEN, BELIFT LAB, HYBE, or their
+    related companies.
+</p>
+
+<div class="socials">
+
+    <a
+        href="https://www.youtube.com/@ENHYPENOFFICIAL"
+        target="_blank">
+        YT
+    </a>
+
+    <a
+        href="https://www.instagram.com/enhypen/"
+        target="_blank">
+        IG
+    </a>
+
+    <a
+        href="https://www.tiktok.com/@enhypen"
+        target="_blank">
+        TT
+    </a>
+
+</div>
+
+<p>
+    © 2026 ENHYPEN Fan Website
+</p>
+
+</footer>
+
+
+<button id="topBtn">
+    ↑
+</button>
+
+
+<script>
+
+/* =========================
+   MEMBERS
+========================= */
+
+const members = [
+
+    {
+        name: "Jungwon",
+        role: "Leader • Vocalist • Dancer",
+        image: "images/jungwon.jpg",
+        bio: "Jungwon is the leader of ENHYPEN. He is known for his calm personality, strong stage presence, and versatile performances.",
+        fact: "Interesting fact: Jungwon is known for his leadership and expressive performances."
+    },
+
+    {
+        name: "Jay",
+        role: "Rapper • Vocalist • Dancer",
+        image: "images/jay.jpg",
+        bio: "Jay is known for his energetic performances, confidence, and passionate personality.",
+        fact: "Interesting fact: Jay is also known for his interest in fashion and cooking."
+    },
+
+    {
+        name: "Jake",
+        role: "Vocalist • Dancer",
+        image: "images/jake.jpg",
+        bio: "Jake is known for his warm personality, vocals, and strong connection with ENGENE.",
+        fact: "Interesting fact: Jake grew up in Australia before becoming a K-pop artist."
+    },
+
+    {
+        name: "Sunghoon",
+        role: "Vocalist • Dancer",
+        image: "images/sunghoon.jpg",
+        bio: "Sunghoon is known for his elegant performance style and charismatic presence.",
+        fact: "Interesting fact: Sunghoon previously competed as a figure skater."
+    },
+
+    {
+        name: "Sunoo",
+        role: "Vocalist • Dancer",
+        image: "images/sunoo.jpg",
+        bio: "Sunoo is known for his bright personality, expressive performances, and distinctive vocals.",
+        fact: "Interesting fact: Sunoo is recognized for his expressive facial expressions on stage."
+    },
+
+    {
+        name: "Ni-Ki",
+        role: "Dancer • Vocalist • Maknae",
+        image: "images/niki.jpg",
+        bio: "Ni-Ki is the youngest member of ENHYPEN and is highly recognized for his powerful dancing.",
+        fact: "Interesting fact: Ni-Ki is known for his impressive dance ability."
+    }
+
+];
+
+
+/* =========================
+   SONGS
+========================= */
+
+const songs = [
+
+    {
+        name: "Given-Taken",
+        album: "BORDER : DAY ONE",
+        category: "title"
+    },
+
+    {
+        name: "Drunk-Dazed",
+        album: "BORDER : CARNIVAL",
+        category: "popular"
+    },
+
+    {
+        name: "FEVER",
+        album: "BORDER : CARNIVAL",
+        category: "popular"
+    },
+
+    {
+        name: "Tamed-Dashed",
+        album: "DIMENSION : DILEMMA",
+        category: "title"
+    },
+
+    {
+        name: "Blessed-Cursed",
+        album: "DIMENSION : ANSWER",
+        category: "title"
+    },
+
+    {
+        name: "Future Perfect (Pass the MIC)",
+        album: "MANIFESTO : DAY 1",
+        category: "title"
+    },
+
+    {
+        name: "Bite Me",
+        album: "DARK BLOOD",
+        category: "title"
+    },
+
+    {
+        name: "Sweet Venom",
+        album: "ORANGE BLOOD",
+        category: "title"
+    },
+
+    {
+        name: "XO (Only If You Say Yes)",
+        album: "ROMANCE : UNTOLD",
+        category: "title"
+    },
+
+    {
+        name: "No Doubt",
+        album: "ROMANCE : UNTOLD",
+        category: "popular"
+    }
+
+];
+
+
+/* =========================
+   ALBUMS
+========================= */
+
+const albums = [
+
+    {
+        name: "BORDER : DAY ONE",
+        date: "2020",
+        image: "https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?auto=format&fit=crop&w=700&q=80"
+    },
+
+    {
+        name: "BORDER : CARNIVAL",
+        date: "2021",
+        image: "https://images.unsplash.com/photo-1619983081563-430f63602796?auto=format&fit=crop&w=700&q=80"
+    },
+
+    {
+        name: "DIMENSION : DILEMMA",
+        date: "2021",
+        image: "https://images.unsplash.com/photo-1619983081563-430f63602796?auto=format&fit=crop&w=700&q=80"
+    },
+
+    {
+        name: "MANIFESTO : DAY 1",
+        date: "2022",
+        image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=700&q=80"
+    },
+
+    {
+        name: "DARK BLOOD",
+        date: "2023",
+        image: "https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=700&q=80"
+    },
+
+    {
+        name: "ORANGE BLOOD",
+        date: "2023",
+        image: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=700&q=80"
+    },
+
+    {
+        name: "ROMANCE : UNTOLD",
+        date: "2024",
+        image: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=700&q=80"
+    },
+
+    {
+        name: "DESIRE : UNLEASH",
+        date: "2025",
+        image: "https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?auto=format&fit=crop&w=700&q=80"
+    }
+
+];
+
+
+/* =========================
+   DISPLAY MEMBERS
+========================= */
+
+const membersGrid =
+    document.getElementById("membersGrid");
+
+members.forEach((member, index) => {
+
+    const card =
+        document.createElement("div");
+
+    card.className = "member-card";
+
+    card.innerHTML = `
+
+        <div class="member-image">
+
+            <img
+                src="${member.image}"
+                alt="${member.name}"
+            >
+
+        </div>
+
+        <div class="member-info">
+
+            <h3>${member.name}</h3>
+
+            <span>${member.role}</span>
+
+            <p>
+                Click to learn more about
+                ${member.name}.
+            </p>
+
+        </div>
+    `;
+
+    card.addEventListener("click", () => {
+
+        openMember(index);
+
+    });
+
+    membersGrid.appendChild(card);
+
+});
+
+
+/* =========================
+   MEMBER MODAL
+========================= */
+
+const modal =
+    document.getElementById("memberModal");
+
+const modalImage =
+    document.getElementById("modalImage");
+
+const modalName =
+    document.getElementById("modalName");
+
+const modalRole =
+    document.getElementById("modalRole");
+
+const modalBio =
+    document.getElementById("modalBio");
+
+const modalFact =
+    document.getElementById("modalFact");
+
+
+function openMember(index) {
+
+    const member =
+        members[index];
+
+    modalImage.src =
+        member.image;
+
+    modalName.textContent =
+        member.name;
+
+    modalRole.textContent =
+        member.role;
+
+    modalBio.textContent =
+        member.bio;
+
+    modalFact.textContent =
+        member.fact;
+
+    modal.classList.add("active");
+}
+
+
+document
+    .getElementById("closeModal")
+    .addEventListener("click", () => {
+
+        modal.classList.remove("active");
+
+    });
+
+
+modal.addEventListener("click", (event) => {
+
+    if (event.target === modal) {
+
+        modal.classList.remove("active");
+
+    }
+
+});
+
+
+/* =========================
+   DISPLAY SONGS
+========================= */
+
+const songsGrid =
+    document.getElementById("songsGrid");
+
+let currentFilter = "all";
+
+
+function displaySongs(
+    filter = "all",
+    search = ""
+) {
+
+    songsGrid.innerHTML = "";
+
+    songs
+        .filter(song => {
+
+            const filterMatch =
+                filter === "all" ||
+                song.category === filter;
+
+            const searchMatch =
+                song.name
+                    .toLowerCase()
+                    .includes(
+                        search.toLowerCase()
+                    );
+
+            return filterMatch &&
+                   searchMatch;
+
+        })
+        .forEach(song => {
+
+            const card =
+                document.createElement("div");
+
+            card.className =
+                "song-card";
+
+            card.innerHTML = `
+
+                <div class="song-cover">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1619983081563-430f63602796?auto=format&fit=crop&w=300&q=80"
+                        alt="${song.name}"
+                    >
+
+                </div>
+
+                <div class="song-info">
+
+                    <h4>
+                        ${song.name}
+                    </h4>
+
+                    <p>
+                        ${song.album}
+                    </p>
+
+                </div>
+
+                <button
+                    class="play-btn"
+                    onclick="openSong('${song.name}')"
+                >
+                    ▶
+                </button>
+
+            `;
+
+            songsGrid.appendChild(card);
+
+        });
+
+}
+
+displaySongs();
+
+
+/* =========================
+   SONG FILTER
+========================= */
+
+document
+    .querySelectorAll(".filter-btn")
+    .forEach(button => {
+
+        button.addEventListener("click", () => {
+
+            document
+                .querySelectorAll(".filter-btn")
+                .forEach(btn => {
+
+                    btn.classList.remove("active");
+
+                });
+
+            button.classList.add("active");
+
+            currentFilter =
+                button.dataset.filter;
+
+            displaySongs(
+                currentFilter,
+                document.getElementById(
+                    "songSearch"
+                ).value
+            );
+
+        });
+
+    });
+
+
+/* =========================
+   SONG SEARCH
+========================= */
+
+document
+    .getElementById("songSearch")
+    .addEventListener("input", function() {
+
+        displaySongs(
+            currentFilter,
+            this.value
+        );
+
+    });
+
+
+function openSong(songName) {
+
+    alert(
+        "You selected: " +
+        songName +
+        "\n\nConnect this button to the official YouTube or Spotify page for the song."
+    );
+
+}
+
+
+/* =========================
+   DISPLAY ALBUMS
+========================= */
+
+const albumsGrid =
+    document.getElementById("albumsGrid");
+
+albums.forEach(album => {
+
+    const card =
+        document.createElement("div");
+
+    card.className =
+        "album-card";
+
+    card.innerHTML = `
+
+        <img
+            src="${album.image}"
+            alt="${album.name}"
+        >
+
+        <h3>
+            ${album.name}
+        </h3>
+
+        <p>
+            ${album.date}
+        </p>
+
+    `;
+
+    albumsGrid.appendChild(card);
+
+});
+
+
+/* =========================
+   MOBILE MENU
+========================= */
+
+const menuBtn =
+    document.getElementById("menuBtn");
+
+const navLinks =
+    document.getElementById("navLinks");
+
+menuBtn.addEventListener("click", () => {
+
+    navLinks.classList.toggle("active");
+
+});
+
+
+document
+    .querySelectorAll(".nav-links a")
+    .forEach(link => {
+
+        link.addEventListener("click", () => {
+
+            navLinks.classList.remove("active");
+
+        });
+
+    });
+
+
+/* =========================
+   BACK TO TOP
+========================= */
+
+const topBtn =
+    document.getElementById("topBtn");
+
+window.addEventListener("scroll", () => {
+
+    if (window.scrollY > 500) {
+
+        topBtn.style.display = "block";
+
+    } else {
+
+        topBtn.style.display = "none";
+
+    }
+
+});
+
+
+topBtn.addEventListener("click", () => {
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+});
+
+
+/* =========================
+   GALLERY LIGHTBOX
+========================= */
+
+document
+    .querySelectorAll(".gallery-item img")
+    .forEach(image => {
+
+        image.addEventListener("click", () => {
+
+            const lightbox =
+                document.createElement("div");
+
+            lightbox.style.position = "fixed";
+            lightbox.style.inset = "0";
+            lightbox.style.background =
+                "rgba(0,0,0,0.95)";
+            lightbox.style.zIndex = "3000";
+            lightbox.style.display = "flex";
+            lightbox.style.alignItems = "center";
+            lightbox.style.justifyContent =
+                "center";
+            lightbox.style.padding = "30px";
+            lightbox.style.cursor = "pointer";
+
+            const img =
+                document.createElement("img");
+
+            img.src = image.src;
+
+            img.style.maxWidth = "95%";
+            img.style.maxHeight = "90%";
+            img.style.objectFit = "contain";
+            img.style.borderRadius = "15px";
+
+            lightbox.appendChild(img);
+
+            document.body.appendChild(
+                lightbox
+            );
+
+            lightbox.addEventListener(
+                "click",
+                () => {
+
+                    lightbox.remove();
+
+                }
+            );
+
+        });
+
+    });
+
+</script>
+
+</body>
+</html>
